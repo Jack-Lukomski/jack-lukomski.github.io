@@ -1,0 +1,10 @@
+{% assign posts = include.posts | default: site.posts %}
+{% if posts.size > 0 %}
+<table class="posts">
+{% for post in posts %}
+<tr><td class="date">{{ post.date | date: "%Y-%m-%d" }}</td><td><a href="{{ post.url | relative_url }}">{{ post.title }}</a></td></tr>
+{% endfor %}
+</table>
+{% else %}
+<p class="meta">No posts yet.</p>
+{% endif %}

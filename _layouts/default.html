@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+{% seo %}
+<link rel="stylesheet" href="{{ '/styles.css' | relative_url }}">
+{% feed_meta %}
+</head>
+<body>
+<div class="wrap">
+<header>
+<b><a href="{{ '/' | relative_url }}">{{ site.title }}</a></b>
+<a href="{{ '/about.html' | relative_url }}"{% if page.nav == 'about' %} class="on"{% endif %}>about</a> |
+<a href="{{ '/blog.html' | relative_url }}"{% if page.nav == 'blog' or page.layout == 'post' %} class="on"{% endif %}>blog</a>
+</header>
+<main>
+{{ content }}
+</main>
+<footer>
+<a href="https://github.com/{{ site.github_username }}">github</a> |
+<a href="{{ '/feed.xml' | relative_url }}">rss</a>
+</footer>
+</div>
+</body>
+</html>

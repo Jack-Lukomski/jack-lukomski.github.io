@@ -1,0 +1,18 @@
+---
+layout: default
+---
+<article>
+<h1>{{ page.title }}</h1>
+<p class="meta">{{ page.date | date: "%B %-d, %Y" }}</p>
+{{ content }}
+</article>
+{% assign share_url = page.url | absolute_url | cgi_escape %}
+{% assign share_title = page.title | cgi_escape | replace: '+', '%20' %}
+<p class="share">share:
+<a href="https://x.com/intent/post?text={{ share_title }}&amp;url={{ share_url }}">x</a> |
+<a href="https://www.linkedin.com/sharing/share-offsite/?url={{ share_url }}">linkedin</a> |
+<a href="https://news.ycombinator.com/submitlink?u={{ share_url }}&amp;t={{ share_title }}">hacker news</a> |
+<a href="https://www.reddit.com/submit?url={{ share_url }}&amp;title={{ share_title }}">reddit</a> |
+<a href="mailto:?subject={{ share_title }}&amp;body={{ share_url }}">email</a>
+</p>
+<p class="back"><a href="{{ '/blog.html' | relative_url }}">&larr; all posts</a></p>

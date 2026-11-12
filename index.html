@@ -1,27 +1,8 @@
-<!DOCTYPE html>
-<html>
-	<head>
-		<title>Home</title>
-		<link rel="stylesheet" href="styles.css">
-	</head>
-<body>
-	<div class="title_center">
-		<h1>jack-lukomski.github.io</h1>
-		<a href="index.html">Home</a>
-		<a href="about.html">About Me</a>
-		<a href="projects.html">Projects</a>
-		<a href="blog.html">Blog</a>
-		<a href="configs.html">Configs</a>
-	</div>
+---
+layout: default
+---
+<p>Working on document intelligence.</p>
 
-	<h1>Home</h1>
-
-	<div class="content_padding">
-
-		<p>Welcome to my website. Here you will find information about me, my projects, blog posts, and just random information I find useful.</p>
-	</div>
-
-	<h2>Dashboard</h2>
-
-</body>
-</html> 
+<h2>Recent posts</h2>
+{% assign recent = site.posts | slice: 0, 10 %}
+{% include post-list.html posts=recent %}

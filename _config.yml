@@ -1,0 +1,19 @@
+title: Jack Lukomski
+description: Notes on building software, AI, and whatever else I'm working on.
+url: https://jack-lukomski.github.io
+baseurl: ""
+author: Jack Lukomski
+github_username: Jack-Lukomski
+
+permalink: /blog/:year/:month/:day/:title.html
+timezone: America/Chicago
+
+plugins:
+  - jekyll-seo-tag
+  - jekyll-feed
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - vendor
