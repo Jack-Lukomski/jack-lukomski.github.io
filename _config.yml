@@ -5,6 +5,10 @@ baseurl: ""
 author: Jack Lukomski
 github_username: Jack-Lukomski
 
+# The github-pages gem enables the Primer theme by default. This site uses its
+# own layouts and styles.css, so turn it off (its Sass also breaks non-UTF-8 builds).
+theme: null
+
 permalink: /blog/:year/:month/:day/:title.html
 timezone: America/Chicago
 
