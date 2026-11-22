@@ -1,0 +1,11 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  // Must match the project name in the Cloudflare dashboard.
+  "name": "jack-lukomski",
+  "compatibility_date": "2026-11-22",
+  // Serve the Jekyll build output as a static site.
+  "assets": {
+    "directory": "./_site",
+    "not_found_handling": "404-page"
+  }
+}
